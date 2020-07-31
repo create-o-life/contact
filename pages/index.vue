@@ -107,14 +107,14 @@ export default {
       return {
         scroll: false,
         color: {
-          btn: {bg: process.env.colorBtnBg, txt: process.env.colorBtnTxt},
-          contact: {input: process.env.colorContactInput}
+          btn: {bg: process.env.COLOR_BTN_BG, txt: process.env.COLOR_BTN_TXT},
+          contact: {input: process.env.COLOR_CONTACT_INPUT}
         },
-        comboLabel: process.env.contactComboLabel,
-        corporateLabel: process.env.contactCorporateLabel,
-        nameLabel: process.env.contactNameLabel,
-        emailLabel: process.env.contactEmailLabel,
-        contentLabel: process.env.contactContentLabel,
+        comboLabel: process.env.CONTACT_COMBO_LABEL,
+        corporateLabel: process.env.CONTACT_CORPORATE_LABEL,
+        nameLabel: process.env.CONTACT_NAME_LABEL,
+        emailLabel: process.env.CONTACT_EMAIL_LABEL,
+        contentLabel: process.env.CONTACT_CONTENT_LABEL,
         checked: [],
         selected: [],
         corporateName: '',
@@ -142,16 +142,16 @@ export default {
     },
     computed: {
       selections () {
-        return process.env.contactSelections.split(',')
+        return process.env.CONTACT_SELECTIONS.split(',')
       },
       items () {
-        return process.env.contactComboItems.split(',')
+        return process.env.CONTACT_COMBO_ITEMS.split(',')
       }
     },
     head () {
       return {
-        title: process.env.topTitle,
-        titleTemplate: (process.env.topTemplate != '')? process.env.topTemplate : `%s - ${process.env.siteName}`,
+        title: process.env.TOP_TITLE,
+        titleTemplate: (process.env.TOP_TEMPLATE != '')? process.env.TOP_TEMPLATE : `%s - ${process.env.SITE_NAME}`,
       }
     }
 }

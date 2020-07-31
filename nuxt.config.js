@@ -1,23 +1,24 @@
 import colors from 'vuetify/es5/util/colors'
 require('dotenv').config()
 
-const {SITE_NAME, SITE_URL, SITE_DESC, SITE_KEYWORDS, ANALYTICS_ID} = process.env
+const {SITE_NAME, SITE_URL, SITE_DESC, SITE_KEYWORDS, TOP_TITLE, TOP_TEMPLATE, ANALYTICS_ID, COLOR_BTN_BG, COLOR_BTN_TXT, COLOR_CONTACT_INPUT, CONTACT_SELECTIONS, CONTACT_COMBO_LABEL, CONTACT_COMBO_ITEMS, CONTACT_CORPORATE_LABEL, CONTACT_NAME_LABEL, CONTACT_EMAIL_LABEL, CONTACT_CONTENT_LABEL} = process.env
 
 export default {
   env: {
-    siteName: SITE_NAME,
-    topTitle: process.env.NUXT_ENV_TOP_TITLE,
-    topTemplate: process.env.NUXT_ENV_TOP_TEMPLATE,
-    colorBtnBg: process.env.NUXT_ENV_COLOR_BTN_BG,
-    colorBtnTxt: process.env.NUXT_ENV_COLOR_BTN_TXT,
-    colorContactInput: process.env.NUXT_ENV_COLOR_CONTACT_INPUT,
-    contactSelections: process.env.NUXT_ENV_CONTACT_SELECTIONS,
-    contactComboLabel: process.env.NUXT_ENV_CONTACT_COMBO_LABEL,
-    contactComboItems: process.env.NUXT_ENV_CONTACT_COMBO_ITEMS,
-    contactCorporateLabel: process.env.NUXT_ENV_CONTACT_CORPORATE_LABEL,
-    contactNameLabel: process.env.NUXT_ENV_CONTACT_NAME_LABEL,
-    contactEmailLabel: process.env.NUXT_ENV_CONTACT_EMAIL_LABEL,
-    contactContentLabel: process.env.NUXT_ENV_CONTACT_CONTENT_LABEL
+    SITE_NAME,
+    TOP_TITLE,
+    TOP_TEMPLATE,
+    ANALYTICS_ID,
+    COLOR_BTN_BG,
+    COLOR_BTN_TXT,
+    COLOR_CONTACT_INPUT,
+    CONTACT_SELECTIONS,
+    CONTACT_COMBO_LABEL,
+    CONTACT_COMBO_ITEMS,
+    CONTACT_CORPORATE_LABEL,
+    CONTACT_NAME_LABEL,
+    CONTACT_EMAIL_LABEL,
+    CONTACT_CONTENT_LABEL
   },
   /*
   ** Nuxt rendering mode
