@@ -147,17 +147,5 @@ export default {
     path: '/sitemap.xml',
     hostname: siteUrl,
     gzip: true
-  },
-  manifest: {
-    title: siteName,
-    'og:title': siteName,
-    description: siteDesc,
-    'og:description': siteDesc,
-    lang: 'ja',
-    theme_color: process.env.NUXT_ENV_COLOR_BTN_BG,
-    "start_url": "/"
-  },
-  icon: {
-    iconFileName: '/icon.png'
   }
 }
