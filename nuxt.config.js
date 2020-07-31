@@ -1,15 +1,11 @@
 import colors from 'vuetify/es5/util/colors'
 require('dotenv').config()
 
-const siteName = process.env.NUXT_ENV_SITE_NAME
-const siteUrl = process.env.NUXT_ENV_SITE_URL
-const siteDesc = process.env.NUXT_ENV_SITE_DESC
-const siteKeywords = process.env.NUXT_ENV_SITE_KEYWORDS
-const analyticsId = process.env.NUXT_ENV_ANALYTICS_ID
+const {SITE_NAME, SITE_URL, SITE_DESC, SITE_KEYWORDS, ANALYTICS_ID} = process.env
 
 export default {
   env: {
-    siteName: siteName,
+    siteName: SITE_NAME,
     topTitle: process.env.NUXT_ENV_TOP_TITLE,
     topTemplate: process.env.NUXT_ENV_TOP_TEMPLATE,
     colorBtnBg: process.env.NUXT_ENV_COLOR_BTN_BG,
@@ -42,7 +38,7 @@ export default {
       prefix: 'og: http://ogp.me/ns#',
       lang: 'ja'
     },
-    titleTemplate: `%s - ${siteName}`,
+    titleTemplate: `%s - ${SITE_NAME}`,
     meta: [
       // 設定関連
       { charset: 'utf-8' },
@@ -50,16 +46,16 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     
       // SEO関連
-      { hid: 'description', name: 'description', content: siteDesc },
-      { hid: 'keywords', name: 'keywords', content: siteKeywords },
+      { hid: 'description', name: 'description', content: SITE_DESC },
+      { hid: 'keywords', name: 'keywords', content: SITE_KEYWORDS },
       
       // ogp関連
-      { hid: 'og:site_name', property: 'og:site_name', content: siteName },
+      { hid: 'og:site_name', property: 'og:site_name', content: SITE_NAME },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:url', property: 'og:url', content: siteUrl },
-      { hid: 'og:title', property: 'og:title', content: siteName },
-      { hid: 'og:description', property: 'og:description', content: siteDesc },
-      { hid: 'og:image', property: 'og:image', content: `${siteUrl}ogp/home.jpg` },
+      { hid: 'og:url', property: 'og:url', content: SITE_URL },
+      { hid: 'og:title', property: 'og:title', content: SITE_NAME },
+      { hid: 'og:description', property: 'og:description', content: SITE_DESC },
+      { hid: 'og:image', property: 'og:image', content: `${SITE_URL}ogp/home.jpg` },
       { name: 'twitter:card', content: 'summary_large_image' },
       
       // pwa iOS
@@ -141,11 +137,11 @@ export default {
   build: {
   },
   googleAnalytics: {
-    id: analyticsId
+    id: ANALYTICS_ID
   },
   sitemap: {
     path: '/sitemap.xml',
-    hostname: siteUrl,
+    hostname: SITE_URL,
     gzip: true
   }
 }
