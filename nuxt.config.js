@@ -61,9 +61,16 @@ export default {
       { hid: 'og:description', property: 'og:description', content: siteDesc },
       { hid: 'og:image', property: 'og:image', content: `${siteUrl}ogp/home.jpg` },
       { name: 'twitter:card', content: 'summary_large_image' },
+      
+      // pwa iOS
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      
+      // apple touch icon
+      { rel: 'apple-touch-icon', type: 'image/png', href: '/icon.png' }
     ]
   },
   /*
@@ -147,6 +154,10 @@ export default {
     description: siteDesc,
     'og:description': siteDesc,
     lang: 'ja',
-    theme_color: process.env.NUXT_ENV_COLOR_BTN_BG
+    theme_color: process.env.NUXT_ENV_COLOR_BTN_BG,
+    "start_url": "/"
+  },
+  icon: {
+    iconFileName: '/icon.png'
   }
 }
