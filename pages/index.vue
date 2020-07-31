@@ -151,7 +151,7 @@ export default {
     head () {
       return {
         title: process.env.TOP_TITLE,
-        titleTemplate: (process.env.TOP_TEMPLATE != '')? process.env.TOP_TEMPLATE : `%s - ${process.env.SITE_NAME}`,
+        titleTemplate: (process.env.TOP_TEMPLATE != '')? process.env.TOP_TEMPLATE : `%s - ${process.env.SITE_TITLE}`,
       }
     }
 }

@@ -1,11 +1,11 @@
 import colors from 'vuetify/es5/util/colors'
 require('dotenv').config()
 
-const {SITE_NAME, SITE_URL, SITE_DESC, SITE_KEYWORDS, TOP_TITLE, TOP_TEMPLATE, ANALYTICS_ID, COLOR_BTN_BG, COLOR_BTN_TXT, COLOR_CONTACT_INPUT, CONTACT_SELECTIONS, CONTACT_COMBO_LABEL, CONTACT_COMBO_ITEMS, CONTACT_CORPORATE_LABEL, CONTACT_NAME_LABEL, CONTACT_EMAIL_LABEL, CONTACT_CONTENT_LABEL} = process.env
+const {SITE_TITLE, SITE_URL, SITE_DESC, SITE_KEYWORDS, TOP_TITLE, TOP_TEMPLATE, ANALYTICS_ID, COLOR_BTN_BG, COLOR_BTN_TXT, COLOR_CONTACT_INPUT, CONTACT_SELECTIONS, CONTACT_COMBO_LABEL, CONTACT_COMBO_ITEMS, CONTACT_CORPORATE_LABEL, CONTACT_NAME_LABEL, CONTACT_EMAIL_LABEL, CONTACT_CONTENT_LABEL} = process.env
 
 export default {
   env: {
-    SITE_NAME,
+    SITE_TITLE,
     TOP_TITLE,
     TOP_TEMPLATE,
     ANALYTICS_ID,
@@ -39,7 +39,7 @@ export default {
       prefix: 'og: http://ogp.me/ns#',
       lang: 'ja'
     },
-    titleTemplate: `%s - ${SITE_NAME}`,
+    titleTemplate: `%s - ${SITE_TITLE}`,
     meta: [
       // 設定関連
       { charset: 'utf-8' },
@@ -51,10 +51,10 @@ export default {
       { hid: 'keywords', name: 'keywords', content: SITE_KEYWORDS },
       
       // ogp関連
-      { hid: 'og:site_name', property: 'og:site_name', content: SITE_NAME },
+      { hid: 'og:site_name', property: 'og:site_name', content: SITE_TITLE },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: SITE_URL },
-      { hid: 'og:title', property: 'og:title', content: SITE_NAME },
+      { hid: 'og:title', property: 'og:title', content: SITE_TITLE },
       { hid: 'og:description', property: 'og:description', content: SITE_DESC },
       { hid: 'og:image', property: 'og:image', content: `${SITE_URL}ogp/home.jpg` },
       { name: 'twitter:card', content: 'summary_large_image' },
